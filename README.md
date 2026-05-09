@@ -1,3 +1,5 @@
+***This project is under verification and correction.***
+
 # RAG-Support-Forecast
 
 Does an LLM's *self-reported* update from retrieved evidence track its *actual*
