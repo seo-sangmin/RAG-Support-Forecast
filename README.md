@@ -1,6 +1,6 @@
 ***\*This project is under verification and correction.***
 
-# RAG-Support-Forecast
+# rag-support-forecast
 
 Does an LLM's *self-reported* update from retrieved evidence track its *actual*
 forecasting improvement? This repository runs a minimum viable experiment to
