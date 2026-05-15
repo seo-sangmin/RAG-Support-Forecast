@@ -15,7 +15,7 @@ test the following hypothesis on binary forecasting questions from
 The experiment elicits two probabilities from Claude Haiku 4.5 for each
 question — the prior P(H) (no retrieval) and the posterior P(H|E) (with
 date-bounded Tavily evidence) — and then checks whether the magnitude of the
-Tentori–Crupi confirmation measure |Z| ranks-correlates with the per-question
+Crupi–Tentori confirmation measure |Z| ranks-correlates with the per-question
 Brier-score improvement.
 
 ## Method
@@ -33,7 +33,7 @@ Brier-score improvement.
 4. Elicit **P(H|E)** from the same model with the question + retrieved
    snippets.
 5. Compute **Brier scores** `(p − outcome)²` against the resolved outcome.
-6. Compute the **Tentori–Crupi Z** confirmation measure
+6. Compute the **Crupi–Tentori Z** confirmation measure
    - `Z = (P(H|E) − P(H)) / (1 − P(H))` if `P(H|E) ≥ P(H)`
    - `Z = (P(H|E) − P(H)) / P(H)` otherwise
 7. Report the **Spearman rank correlation** between `|Z|` and
@@ -128,7 +128,7 @@ pytest -q
 ```
 
 Covers the Brier formula at extremes, both branches and bounds of the
-Tentori–Crupi Z, Spearman on perfect / anti-correlated / degenerate inputs,
+Crupi–Tentori Z, Spearman on perfect / anti-correlated / degenerate inputs,
 and a fixture-based smoke test of the question/resolution loader.
 
 ## Design choices
